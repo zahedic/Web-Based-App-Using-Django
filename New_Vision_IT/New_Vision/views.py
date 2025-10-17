@@ -4,6 +4,13 @@ from .models import  Student,Instructor
 
 # Create your views here.
 
+# --------------------------Home Page --------------------------
+
+def home_page(request):
+    return render(request,'home.html')
+
+
+
 # --------------------------Instructor CRUD --------------------------
 
 def instructor_list(request):
