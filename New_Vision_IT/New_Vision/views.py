@@ -1,6 +1,6 @@
 #from django.http import HttpResponse
 from django.shortcuts import render,redirect,get_list_or_404
-from .models import  Student,Instructor
+from .models import  Student,Instructor,Course,Result
 
 # Create your views here.
 
@@ -23,6 +23,21 @@ def instructor_list(request):
 def student_list(request):
     students=Student.objects.all()
     return render(request,'student_list.html',{'students':students})
+
+
+# --------------------------Course CRUD --------------------------
+
+def course_list(request):
+    course=Course.objects.all()
+    return render(request,'course_list.html',{'course':course})
+
+
+# --------------------------Result CRUD --------------------------
+
+def result_list(request):
+    result=Result.objects.all()
+    return render(request,'result_list.html',{'result':result})
+
 
 
 
