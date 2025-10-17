@@ -1,0 +1,18 @@
+<h3>All Instructors</h3>
+
+<table class="table">
+  <tr><th>Name</th><th>Email</th><th>Department</th><th>Action</th></tr>
+  {% for i in instructors %}
+  <tr>
+    <td>{{ i.name }}</td>
+    <td>{{ i.email }}</td>
+    <td>{{ i.department }}</td>
+    <td>
+      <a href="" class="btn btn-success mb-3">+ Add </a>
+      <a href="" class="btn btn-sm btn-primary">Edit</a>
+      <a href="" class="btn btn-sm btn-danger">Delete</a>
+      
+    </td>
+  </tr>
+  {% endfor %}
+</table>

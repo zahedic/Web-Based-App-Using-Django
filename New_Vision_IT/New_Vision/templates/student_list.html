@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>All Students</h2>
+
+<table >
+  <tr>
+    <th>SID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Action</th>
+  </tr>
+  {% for s in students %}
+  <tr>
+    <td>{{ s.sid }}</td>
+    <td>{{ s.name }}</td>
+   
+    <td>{{ s.email }}</td>
+    <td>
+      <a href="">Add </a>
+      <a href="">Edit</a> |
+      <a href="">Delete</a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+{% endblock %}
