@@ -28,11 +28,24 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="">Home</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a></li>
+
                     <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'students' %}active{% endif %}" href="{% url 'student_list' %}">Students</a></li>
-                    <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'courses' %}active{% endif %}" href="">Courses</a></li>
+
+                    <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'courses' %}active{% endif %}" href="{% url "course_list" %}">Courses</a></li>
+
                     <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'instructors' %}active{% endif %}" href="{% url 'instructor_list' %}">Instructors</a></li>
-                    <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'results' %}active{% endif %}" href="">Results</a></li>
+
+                    <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'results' %}active{% endif %}" href="{% url "result_list" %}">Results</a></li>
+
+                    <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'results' %}active{% endif %}" href="{% url "result_list" %}">About</a></li>
+
+                    <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'results' %}active{% endif %}" href="{% url "result_list" %}">Success story</a></li>
+
+
+                    <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'results' %}active{% endif %}" href="{% url "result_list" %}">Contact Us</a></li>
+
+
                 </ul>
 
                 <!-- Search Box -->

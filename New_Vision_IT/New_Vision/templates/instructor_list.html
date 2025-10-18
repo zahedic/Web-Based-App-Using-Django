@@ -1,4 +1,6 @@
+
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
 
 <div class="card shadow-sm mb-5">
@@ -11,9 +13,12 @@
         <thead class="table-success">
           <tr>
             <th scope="col">Name</th>
-            <th scope="col">Email</th>
             <th scope="col">Department</th>
-            <th scope="col" class="text-center">Action</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            
+           
+            <th scope="col" class="text-center">Picture</th>
           </tr>
         </thead>
         <tbody>
@@ -21,12 +26,16 @@
           <tr>
             
             <td>{{ i.name }}</td>
-            <td>{{ i.email }}</td>
             <td>{{ i.department }}</td>
+            <td>{{ i.email }}</td>
+             <td>{{ i.phone }}</td>
+           
             <td class="text-center">
-               <a href="" class="btn btn-success btn-sm">+ Add </a>
-              <a href="" class="btn btn-sm btn-primary">Edit</a>
-              <a href="" class="btn btn-sm btn-danger">Delete</a>
+
+               <img src="{{ i.picture.url }}" alt="Courses" class="mx-auto mb-3" width="150"> 
+
+               
+
             </td>
           </tr>
           {% empty %}
@@ -40,3 +49,9 @@
 <br><br><br><br><br><br><br><br><br><br><br>
 
 {% endblock %}
+
+    name = models.CharField(max_length=100)
+    department = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    phone = models.CharField(max_length=15)  # Changed IntegerField → CharField
+    picture = models.ImageField(upload_to='instructors/')

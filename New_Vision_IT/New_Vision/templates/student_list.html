@@ -13,7 +13,11 @@
             <th scope="col">SID</th>
             <th scope="col">Name</th>
             <th scope="col">Email</th>
-            <th scope="col" class="text-center">Action</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Course</th>
+            <th scope="col">Picture</th>
+
+           
           </tr>
         </thead>
         <tbody>
@@ -22,11 +26,11 @@
             <td>{{ s.sid }}</td>
             <td>{{ s.name }}</td>
             <td>{{ s.email }}</td>
-            <td class="text-center">
-               <a href="" class="btn btn-success btn-sm">+ Add </a>
-              <a href="" class="btn btn-sm btn-primary">Edit</a>
-              <a href="" class="btn btn-sm btn-danger">Delete</a>
-            </td>
+            <td>{{ s.phone }}</td>
+            <td>{{ s.course }}</td>
+            <td><img src="{{ s.picture.url }}" alt="Courses" class="mx-auto mb-3" width="150"> </td>
+           
+           
           </tr>
           {% empty %}
           <tr><td colspan="4" class="text-center text-muted">No students found.</td></tr>
@@ -39,3 +43,6 @@
 <br><br><br><br><br><br><br><br><br><br><br>
 
 {% endblock %}
+
+
+  

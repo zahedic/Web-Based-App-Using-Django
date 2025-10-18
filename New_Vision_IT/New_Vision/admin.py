@@ -4,17 +4,17 @@ from .models import  Instructor, Course, Student, Result
 # Register your models here.
 @admin.register(Student)
 class Student_Model_Admin(admin.ModelAdmin):
-    list_display=['sid','name','email']
+    list_display=['sid','name','email','phone','course','picture']
 
 
 @admin.register(Instructor)
 class Instructor_Model_Admin(admin.ModelAdmin):
-    list_display=['name','email','department']
+    list_display=['name','email','department','phone','picture']
 
 
 @admin.register(Course)
 class Course_Model_Admin(admin.ModelAdmin):
-    list_display=['title','code','instructor']
+    list_display=['code','title','description','instructor','picture']
 
 
 @admin.register(Result)

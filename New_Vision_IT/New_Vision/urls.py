@@ -1,5 +1,7 @@
 from django.urls import path
 from New_Vision import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -10,4 +12,4 @@ urlpatterns = [
     path('course/', views.course_list, name='course_list'),
     path('result/', views.result_list, name='result_list'),
    
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

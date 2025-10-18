@@ -1,19 +1,53 @@
 {% extends 'base.html' %}
 {% block content %}
-<h3>All Courses</h3>
-<a href="{% url 'add_course' %}" class="btn btn-success mb-3">+ Add Course</a>
-<table class="table table-bordered">
-  <tr><th>Title</th><th>Code</th><th>Instructor</th><th>Action</th></tr>
-  {% for c in courses %}
-  <tr>
-    <td>{{ c.title }}</td>
-    <td>{{ c.code }}</td>
-    <td>{{ c.instructor.name }}</td>
-    <td>
-      <a href="{% url 'edit_course' c.id %}" class="btn btn-sm btn-primary">Edit</a>
-      <a href="{% url 'delete_course' c.id %}" class="btn btn-sm btn-danger">Delete</a>
-    </td>
-  </tr>
-  {% endfor %}
-</table>
+
+<div class="card shadow-sm mb-5">
+    <div class="card-header  text-white d-flex justify-content-between align-items-center">
+      <h4 class="mb-0 text-dark" >Course</h4>
+     
+    </div>
+    <div class="card-body">
+      <table class="table table-hover table-bordered align-middle">
+        <thead class="table-success">
+          <tr>
+            <th scope="col">Code</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Instructor </th>
+            <th scope="col">Instructor Picture</th>
+            <th scope="col">Course Price</th>
+
+
+           
+          </tr>
+        </thead>
+        <tbody>
+          {% for c in course %}
+          <tr>
+            
+            <td>{{ c.code }}</td>
+            <td>{{ c.title }}</td>
+            <td>{{ c.description }}</td>
+            <td>{{ c.instructor }}</td>
+            <td><img src="{{ c.picture.url }}" alt="Courses" class="mx-auto mb-3" width="150"> </td>
+           
+            <td>{{ c.price }}</td>
+           
+
+            
+           
+          </tr>
+          {% empty %}
+          <tr><td colspan="4" class="text-center text-muted">No instructors found.</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<br><br><br><br><br><br><br><br><br><br><br>
+
 {% endblock %}
+
+
+    
