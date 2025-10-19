@@ -1,40 +1,55 @@
 {% extends 'base.html' %}
+
+{% load static %}
+
+
 {% block content %}
 
 
 
-<div class="card shadow-sm mb-5">
-    <div class="card-header  text-white d-flex justify-content-between align-items-center">
-      <h4 class="mb-0 text-dark" >Success</h4>
-     
-    </div>
-    <div class="card-body">
-      <table class="table table-hover table-bordered align-middle">
-        <thead class="table-success">
-          <tr>
+<style>
 
-           
+<link rel="stylesheet" href="success.css">
+
+<title>সফল ছাত্র-ছাত্রী</title>
 
 
-           
-          </tr>
-        </thead>
-        <tbody>
-          
-          <tr>
-            
-            
-           
-           
-           
+</style>
+</head>
+<body>
+<header>
+<h1>🎓 সফল ছাত্র-ছাত্রীদের গল্প</h1>
+<p> আমাদের স্টুডেন্টদের সাফল্যের মুহূর্তগুলো দেখুন </p>
+</header>
 
-            
-           
-          
-        </tbody>
-      </table>
-    </div>
-  </div>
+
+<section class="gallery">
+<div class="card">
+<img src="images/success1.jpg" alt="ছাত্রী - হাসি">
+<div class="info">
+<h3>মোঃ সাহেদুল ইসলাম</h3>
+<p>ওয়েব ডেভেলপমেন্ট কোর্স</p>
+</div>
+</div>
+
+
+<div class="card">
+<img src="images/success2.jpg" alt="ছাত্র - আনিসুর রহমান">
+<div class="info">
+<h3>আনিসুর রহমান</h3>
+<p>গ্রাফিক্স ডিজাইন প্রজেক্ট</p>
+</div>
+</div>
+
+
+<div class="card">
+<video controls src="videos/student3.mp4"></video>
+<div class="info">
+<h3>মোঃ রহিম</h3>
+<p>ডাটা সায়েন্স প্রজেক্ট ভিডিও</p>
+</div>
+</div>
+
 
 <br><br><br><br><br><br><br><br><br><br><br>
 
