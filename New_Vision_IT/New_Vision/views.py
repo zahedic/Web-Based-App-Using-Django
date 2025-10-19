@@ -39,6 +39,25 @@ def result_list(request):
     return render(request,'result_list.html',{'result':result})
 
 
+# --------------------------About Page --------------------------
+
+def about_page(request):
+    return render(request,'about.html')
+
+
+# --------------------------Success Page --------------------------
+
+def success_page(request):
+    return render(request,'success.html')
+
+
+
+# --------------------------Contact Page --------------------------
+
+def contact_page(request):
+    return render(request,'contact.html')
+
+
 
 
 '''
