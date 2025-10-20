@@ -1,0 +1,145 @@
+/*------------------------- discount Animation -------------------------*/
+.star-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ইমোজি স্টারের রঙ পরিবর্তনের জন্য filter ব্যবহার */
+.star {
+  font-size: 220px;
+  
+
+  animation: filterChange 3s infinite;
+}
+
+/* 20% ঘুরবে */
+.percentage {
+  position: absolute;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fc0000;
+  animation: rotateText 2s linear infinite;
+  margin-top: 50px;
+}
+
+/* filter দিয়ে ইমোজির রঙ পরিবর্তন */
+@keyframes filterChange {
+  0%   { color:#f8cea7; }
+  20%  {color: #f08282;}
+  40%  {color: #9caaf8;}
+  60%  {color: #9ffaae;}
+  80%  {color: #f4ffa2;}
+  100% {color: #fda3d8; }
+}
+
+/* লেখার ঘূর্ণন */
+@keyframes rotateText {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
+/*------------------------- New Vision IT Animation -------------------------*/
+.color-change-text {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  animation: colorChange 4s infinite;
+}
+
+/* keyframes দিয়ে রঙ পরিবর্তন */
+@keyframes colorChange {
+  0% { color: #ff4d4d; }     /* লাল */
+  25% { color: #00bcd4; }    /* নীল */
+  50% { color: #4caf50; }    /* সবুজ */
+  75% { color: #ff9800; }    /* কমলা */
+  100% { color: #9c27b0; }   /* বেগুনি */
+}
+
+
+
+
+
+/*-------------------------  Section Text Animation -------------------------*/
+.section-title {
+  font-size: 2.5rem;
+  position: relative;
+  
+  color: #0f172a;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideIn 1.2s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+/* নিচে লাইট গ্লো (neon-style border glow) */
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  width: 0%;
+  height: 5px;
+  background: linear-gradient(90deg, #007bff, #6200ff, #fa0404);
+  border-radius: 5px;
+  transform: translateX(-50%);
+  animation: underlineGrow 5s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+/* Glow shadow animation */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+    text-shadow: none;
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-6px);
+    text-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: 0 0 25px rgba(0, 123, 255, 0.5),
+                 0 0 40px rgba(111, 66, 193, 0.4);
+  }
+}
+
+/* Underline animation */
+@keyframes underlineGrow {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  60% {
+    width: 50%;
+    opacity: 1;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+
+/*------------------------- Image Animation -------------------------*/
+
+.course-img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.course-img:hover {
+  transform: scale(1.3);
+  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3);
+}
+
+
+
+

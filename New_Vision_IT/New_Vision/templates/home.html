@@ -1,16 +1,31 @@
 {% extends "base.html" %}
 {% load static %}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
 {% block title %}Home | Django CRUD App{% endblock %}
 
 {% block content %}
+
 
 <!-- ======== HERO SECTION ======== -->
 <section class="py-5 bg-light text-center">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6 mb-4 mb-md-0">
-        <h1 class="fw-bold text-dark mb-3">Welcome to <span class="text-primary">New Vision Information Technology Ltd.</span></h1>
+
+
+        <h1 class="fw-bold text-dark mb-3"> <span class="text-primary">Welcome to</span></h1>
+        
+       
+        <h1 class="color-change-text">
+        New Vision Information Technology Ltd.
+       
+        </h1>
+        
         <p class="lead text-danger fw-bold">
+  
           Largest IT Training Institute in Chattogram
         </p>
         <a href="{% url 'student_list' %}" class="btn btn-primary btn-lg mt-3">Get Started</a>
@@ -25,15 +40,29 @@
 <!-- ======== FEATURE SECTION ======== -->
 <section class="py-5">
   <div class="container">
-    <h2 class="text-center fw-bold mb-5">Our Courses</h2>
+    
+
+  <div class="star-container">
+  <div class="star"> ✦  </div>
+  <div class="percentage">20% OFF</div>
+</div>
+
+
+
+
+
+    <h2 class="text-center fw-bold mb-5 section-title">Our Courses</h2>
+
     <div class="row g-4">
 
       <!-- Python Programming -->
       <div class="col-md-3">
         <div class="card border-0 shadow-sm h-100 text-center p-4">
-          <img src="{% static 'image/python.jpeg' %}" alt="Students" class="mx-auto mb-3" width="150">
+               
+         <img src="{% static 'image/python.jpeg' %}" alt="Students" class="mx-auto mb-3 course-img" width="150">
+
           <h5 class="fw-bold mb-2">Python Programming</h5>
-          <p class="text-muted small">Basic Concept,OOP,Python Libraries,Data Structure & Algorithms...etc</p>
+          <p class="text-muted small">Basic Concept,Object Oriented Programming,Python Libraries,Data Structure & Algorithms,Python Framework,,Problem Solving ...etc</p>
           <a href="{% static 'image/Complete Python Programming Roadmap.pdf'%}" class="btn btn-outline-primary btn-sm mt-auto">View More</a>
         </div>
       </div>
@@ -41,9 +70,12 @@
       <!-- Courses Machine Learning -->
       <div class="col-md-3">
         <div class="card border-0 shadow-sm h-100 text-center p-4">
-          <img src="{% static 'image/Machine_Learning.jpeg' %}" alt="Courses" class="mx-auto mb-3" width="150">
+
+         
+          <img src="{% static 'image/Machine_Learning.jpeg' %}" alt="Students" class="mx-auto mb-3 course-img" width="150">
+
           <h5 class="fw-bold mb-2">Machine Learning</h5>
-          <p class="text-muted small">Manage all courses and subjects efficiently.</p>
+          <p class="text-muted small">Supervised Learning,Unsupervised Learning,Reinforcement Learning,Neural Networks & Deep Learning,Feature Engineering & Preprocessing,Model Evaluation & Validation,Generative Models ... etc</p>
           <a href="" class="btn btn-outline-primary btn-sm mt-auto">View More</a>
         </div>
       </div>
@@ -51,9 +83,14 @@
       <!-- Deep Learning -->
       <div class="col-md-3">
         <div class="card border-0 shadow-sm h-100 text-center p-4">
-          <img src="{% static 'image/Deep_Learning.jpeg' %}" alt="Instructors" class="mx-auto mb-3" width="150">
+
+         
+          
+          <img src="{% static 'image/Deep_Learning.jpeg' %}" alt="Students" class="mx-auto mb-3 course-img" width="150">
+
+          
           <h5 class="fw-bold mb-2">Deep Learning</h5>
-          <p class="text-muted small">Add, Update, and Manage instructor details.</p>
+          <p class="text-muted small">Artificial Neural Networks (ANN),Convolutional Neural Networks (CNN),Recurrent Neural Networks (RNN),Transformers and Attention,Autoencoders, Generative Adversarial Networks (GANs) .... etc</p>
           <a href="{% url "instructor_list" %}" class="btn btn-outline-primary btn-sm mt-auto">View More</a>
         </div>
       </div>
@@ -61,20 +98,19 @@
       <!-- Data Science -->
       <div class="col-md-3">
         <div class="card border-0 shadow-sm h-100 text-center p-4">
-          <img src="{% static 'image/Data Science.jpeg' %}" alt="Results" class="mx-auto mb-3" width="150">
+          
+         
+           <img src="{% static 'image/Data Science.jpeg' %}" alt="Students" class="mx-auto mb-3 course-img" width="150">
+
+
           <h5 class="fw-bold mb-2">Data Science</h5>
-          <p class="text-muted small">View and update students' performance records.</p>
+          <p class="text-muted small">Data Collection & Management,Statistics & Probability,Data Visualization,Exploratory Data Analysis (EDA),Machine Learning for Data Science,Machine Learning for Data Science,Big Data & Tools,Deep Learning in Data Science,Natural Language Processing (NLP) .....etc</p>
           <a href="" class="btn btn-outline-primary btn-sm mt-auto">View More</a>
         </div>
       </div>
 
     </div>
   </div>
-
-
-
-
-  
 
 </section>
 
@@ -84,13 +120,17 @@
 
 <section class="py-5">
   <div class="container">
-    <h2 class="text-center fw-bold mb-5">Our Trainer</h2>
+   
+     <h2 class="text-center fw-bold mb-5 section-title">Our Trainer</h2>
     <div class="row g-4">
 
       <!-- Python Programming -->
       <div class="col-md-3">
         <div class="card border-0 shadow-sm h-100 text-center p-4">
-          <img src="{% static 'image/Zahed.jpg' %}" alt="Students" class="mx-auto mb-3" width="150">
+          
+           <img src="{% static 'image/Zahed.jpg' %}" alt="Students" class="mx-auto mb-3 course-img" width="150">
+
+
           <h5 class="fw-bold mb-2">Zahedul Islam Chowdhury</h5>
           <p class="text-primary bold">Python Programming</p>
           <a href="{% static 'image/Python_Course.png'%}" class="btn btn-outline-primary btn-sm mt-auto">View More</a>
@@ -100,9 +140,11 @@
       <!-- Courses Machine Learning -->
       <div class="col-md-3">
         <div class="card border-0 shadow-sm h-100 text-center p-4">
-          <img src="{% static 'image/Machine_Learning.jpeg' %}" alt="Courses" class="mx-auto mb-3" width="150">
-          <h5 class="fw-bold mb-2">Machine Learning</h5>
-          <p class="text-muted small">Manage all courses and subjects efficiently.</p>
+        
+          <img src="{% static 'image/Rashedul_Alam_Sakil.jpeg' %}" alt="Students" class="mx-auto mb-3 course-img" width="150">
+
+          <h5 class="fw-bold mb-2">Rashedul Alam Sakil</h5>
+          <p class="text-primary small">Machine Learning</p>
           <a href="" class="btn btn-outline-primary btn-sm mt-auto">View More</a>
         </div>
       </div>
@@ -110,9 +152,10 @@
       <!-- Deep Learning -->
       <div class="col-md-3">
         <div class="card border-0 shadow-sm h-100 text-center p-4">
-          <img src="{% static 'image/Deep_Learning.jpeg' %}" alt="Instructors" class="mx-auto mb-3" width="150">
-          <h5 class="fw-bold mb-2">Deep Learning</h5>
-          <p class="text-muted small">Add, Update, and Manage instructor details.</p>
+          
+          <img src="{% static 'image/Mejbah_Ahmed.jpeg' %}" alt="Students" class="mx-auto mb-3 course-img" width="150">
+          <h5 class="fw-bold mb-2">Mejbah Ahmed</h5>
+          <p class="text-primary small">Deep Learning</p>
           <a href="{% url "instructor_list" %}" class="btn btn-outline-primary btn-sm mt-auto">View More</a>
         </div>
       </div>
@@ -120,9 +163,10 @@
       <!-- Data Science -->
       <div class="col-md-3">
         <div class="card border-0 shadow-sm h-100 text-center p-4">
-          <img src="{% static 'image/Data Science.jpeg' %}" alt="Results" class="mx-auto mb-3" width="150">
-          <h5 class="fw-bold mb-2">Data Science</h5>
-          <p class="text-muted small">View and update students' performance records.</p>
+         
+          <img src="{% static 'image/Faysal_Wahid.jpeg' %}" alt="Students" class="mx-auto mb-3 course-img" width="150">
+          <h5 class="fw-bold mb-2">Faysal Wahid</h5>
+          <p class="text-primary small">Data Science</p>
           <a href="" class="btn btn-outline-primary btn-sm mt-auto">View More</a>
         </div>
       </div>
@@ -143,14 +187,17 @@
 
 <section class="py-5">
   <div class="container">
-    <h2 class="text-center fw-bold mb-5">Success Story</h2>
+    
+     <h2 class="text-center fw-bold mb-5 section-title">Success Story</h2>
     <div class="row g-4">
 
       <!-- Programming Stuent-->
       <div class="col-md-3">
         <div class="card border-0 shadow-sm h-100 text-center p-4">
-          <img src="" alt="Students" class="mx-auto mb-3" width="150">
-          <h5 class="fw-bold mb-2">Sahedul Islam </h5>
+
+            <img src="{% static 'image/UH.jpg' %}" alt="Students" class="mx-auto mb-3 course-img" width="150">
+
+          <h5 class="fw-bold mb-2">Umme Halima </h5>
           <p class="text-primary bold">Python Programming</p>
           <a href="{% static 'image/Python_Course.png'%}" class="btn btn-outline-primary btn-sm mt-auto">View More</a>
         </div>
@@ -159,8 +206,8 @@
       <!-- Machine Learning Student-->
       <div class="col-md-3">
         <div class="card border-0 shadow-sm h-100 text-center p-4">
-          <img src="" alt="Courses" class="mx-auto mb-3" width="150">
-          <h5 class="fw-bold mb-2">Anisul Islam</h5>
+           <img src="{% static 'image/Sajjad.jpg' %}" alt="Students" class="mx-auto mb-3 course-img" width="150">
+          <h5 class="fw-bold mb-2">Sajjad Khan</h5>
           <p class="text-primary small">Machine Learning</p>
           <a href="" class="btn btn-outline-primary btn-sm mt-auto">View More</a>
         </div>
@@ -169,9 +216,9 @@
       <!-- Deep Learning -->
       <div class="col-md-3">
         <div class="card border-0 shadow-sm h-100 text-center p-4">
-          <img src="" alt="Instructors" class="mx-auto mb-3" width="150">
-          <h5 class="fw-bold mb-2">Mohammad Rohim</h5>
-          <p class="text-primary small">Deep Learning</p>
+         <img src="{% static 'image/Rony_Dey.png' %}" alt="Students" class="mx-auto mb-3 course-img" width="150">
+          <h5 class="fw-bold mb-2">Rony Dey</h5>
+          <p class="text-primary small">Data Science</p>
           <a href="{% url "instructor_list" %}" class="btn btn-outline-primary btn-sm mt-auto">View More</a>
         </div>
       </div>
@@ -179,9 +226,9 @@
       <!-- Data Science -->
       <div class="col-md-3">
         <div class="card border-0 shadow-sm h-100 text-center p-4">
-          <img src="" alt="Results" class="mx-auto mb-3" width="150">
-          <h5 class="fw-bold mb-2">Data Science</h5>
-          <p class="text-primary small">View and update students' performance records.</p>
+            <img src="{% static 'image/zawad.jpg' %}" alt="Students" class="mx-auto mb-3 course-img" width="150">
+          <h5 class="fw-bold mb-2">Zawad Islam Chowdhury</h5>
+          <p class="text-primary small">Web Design & Development</p>
           <a href="" class="btn btn-outline-primary btn-sm mt-auto">View More</a>
         </div>
       </div>
