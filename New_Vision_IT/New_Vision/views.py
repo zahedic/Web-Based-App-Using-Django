@@ -7,7 +7,9 @@ from .models import  Student,Instructor,Course,Result
 # --------------------------Home Page --------------------------
 
 def home_page(request):
-    return render(request,'home.html')
+    instructors=Instructor.objects.all()
+    return render(request,'home.html',{'instructors':instructors})
+
 
 
 

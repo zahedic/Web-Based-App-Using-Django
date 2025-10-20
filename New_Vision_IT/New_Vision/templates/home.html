@@ -114,74 +114,31 @@
 
 </section>
 
-
-
-
-
 <section class="py-5">
   <div class="container">
    
      <h2 class="text-center fw-bold mb-5 section-title">Our Trainer</h2>
     <div class="row g-4">
 
-      <!-- Python Programming -->
+      <!-- Our All Trainer -->
+      {% for i in instructors  %}
+
       <div class="col-md-3">
         <div class="card border-0 shadow-sm h-100 text-center p-4">
+  
+           <img src="{{i.picture.url}}" alt="Students" class="mx-auto mb-3 course-img" width="150">
+
+          <h5 class="fw-bold mb-2">{{i.name}}</h5>
+          <p class="text-primary bold">{{i.department}}</p>
           
-           <img src="{% static 'image/Zahed.jpg' %}" alt="Students" class="mx-auto mb-3 course-img" width="150">
-
-
-          <h5 class="fw-bold mb-2">Zahedul Islam Chowdhury</h5>
-          <p class="text-primary bold">Python Programming</p>
-          <a href="{% static 'image/Python_Course.png'%}" class="btn btn-outline-primary btn-sm mt-auto">View More</a>
-        </div>
-      </div>
-
-      <!-- Courses Machine Learning -->
-      <div class="col-md-3">
-        <div class="card border-0 shadow-sm h-100 text-center p-4">
-        
-          <img src="{% static 'image/Rashedul_Alam_Sakil.jpeg' %}" alt="Students" class="mx-auto mb-3 course-img" width="150">
-
-          <h5 class="fw-bold mb-2">Rashedul Alam Sakil</h5>
-          <p class="text-primary small">Machine Learning</p>
           <a href="" class="btn btn-outline-primary btn-sm mt-auto">View More</a>
         </div>
       </div>
-
-      <!-- Deep Learning -->
-      <div class="col-md-3">
-        <div class="card border-0 shadow-sm h-100 text-center p-4">
-          
-          <img src="{% static 'image/Mejbah_Ahmed.jpeg' %}" alt="Students" class="mx-auto mb-3 course-img" width="150">
-          <h5 class="fw-bold mb-2">Mejbah Ahmed</h5>
-          <p class="text-primary small">Deep Learning</p>
-          <a href="{% url "instructor_list" %}" class="btn btn-outline-primary btn-sm mt-auto">View More</a>
-        </div>
-      </div>
-
-      <!-- Data Science -->
-      <div class="col-md-3">
-        <div class="card border-0 shadow-sm h-100 text-center p-4">
-         
-          <img src="{% static 'image/Faysal_Wahid.jpeg' %}" alt="Students" class="mx-auto mb-3 course-img" width="150">
-          <h5 class="fw-bold mb-2">Faysal Wahid</h5>
-          <p class="text-primary small">Data Science</p>
-          <a href="" class="btn btn-outline-primary btn-sm mt-auto">View More</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-
+      {% endfor %}
 
   
 
 </section>
-
-
 
 
 

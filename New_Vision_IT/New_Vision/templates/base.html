@@ -30,13 +30,13 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a></li>
 
-                    <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'students' %}active{% endif %}" href="{% url 'student_list' %}">Students</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'student_list' %}active{% endif %}" href="{% url 'student_list' %}">Students</a></li>
 
-                    <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'courses' %}active{% endif %}" href="{% url "course_list" %}">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'course_list' %}active{% endif %}" href="{% url "course_list" %}">Courses</a></li>
 
-                    <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'instructor' %}active{% endif %}" href="{% url 'instructor_list' %}">Instructors</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'instructor_list' %}active{% endif %}" href="{% url 'instructor_list' %}">Instructors</a></li>
 
-                    <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'results' %}active{% endif %}" href="{% url "result_list" %}">Results</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'result_list' %}active{% endif %}" href="{% url "result_list" %}">Results</a></li>
 
                     <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}" href="{% url "about_page" %}">About</a></li>
 
